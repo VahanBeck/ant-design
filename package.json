@@ -1,6 +1,6 @@
 {
-  "name": "antd-shiftright",
-  "version": "0.1",
+  "name": "antd",
+  "version": "4.16.5",
   "description": "An enterprise-class UI design language and React components implementation",
   "title": "Ant Design",
   "keywords": [
@@ -64,6 +64,7 @@
     "compile:less": "antd-tools run compile:less",
     "changelog": "node ./scripts/print-changelog",
     "predeploy": "antd-tools run clean && npm run site && cp CNAME _site && npm run site:test",
+    "preinstall": "npm run compile && npm run dist && npm run publish",
     "deploy": "bisheng gh-pages --push-only --dotfiles",
     "deploy:china-mirror": "git checkout gh-pages && git pull origin gh-pages && git push git@gitee.com:ant-design/ant-design.git gh-pages",
     "dist": "antd-tools run dist",
